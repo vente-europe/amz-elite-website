@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.bak
+
+# Secrets / env (just in case)
+.env
+.env.local
+*.key
+*.pem
+
+# Old/legacy folder (optional - usun jesli chcesz commitowac stary landing)
+landing/

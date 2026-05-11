@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Clickio Consent (RODO banner) -->
+    <script async type="text/javascript" src="//clickiocmp.com/t/consent_248371.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZKKSQ64RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JZKKSQ64RV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobierz Checklistę Amazon - Tomasz Mickiewicz</title>
+    <meta name="description" content="Darmowa checklista dla sprzedawców Amazon - 15 punktów audytu listingu w PDF. Pobierz za darmo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            min-height: 100vh;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        /* Top bar with logo */
+        .top-bar {
+            padding: 24px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--primary); }
+
+        /* Main layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 64px;
+            align-items: center;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 64px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-left .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(220, 38, 38, 0.08);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero-left h1 .accent { color: var(--primary); }
+
+        .hero-left .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--dark-light);
+        }
+
+        .benefits i {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        /* Form card */
+        .form-card {
+            background: var(--dark);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .form-card-inner { position: relative; z-index: 1; }
+
+        .form-card .icon-circle {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+        }
+
+        .form-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .form-card p {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        /* Form overrides (MailerLite structure preserved) */
+        #mlb2-39806722 .ml-form-embedBody,
+        #mlb2-39806722 .ml-form-successBody {
+            padding: 0 !important;
+        }
+
+        #mlb2-39806722 .ml-form-embedWrapper {
+            background: transparent !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            display: block !important;
+        }
+
+        #mlb2-39806722 .ml-form-embedContent { display: none !important; }
+
+        #mlb2-39806722 .ml-form-formContent { margin: 0 0 16px 0 !important; }
+
+        #mlb2-39806722 input[type="email"] {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1rem !important;
+            padding: 16px 20px !important;
+            border-radius: 12px !important;
+            transition: all 0.2s;
+        }
+
+        #mlb2-39806722 input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        #mlb2-39806722 input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary) !important;
+            background: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        #mlb2-39806722 .ml-form-embedSubmit { margin: 0 !important; }
+
+        #mlb2-39806722 .ml-form-embedSubmit button[type="submit"] {
+            background: var(--primary) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            padding: 16px 24px !important;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+            width: 100% !important;
+        }
+
+        #mlb2-39806722 .ml-form-embedSubmit button[type="submit"]:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        #mlb2-39806722 .ml-form-embedSubmit button.loading {
+            background: var(--primary) !important;
+            border-radius: 50px !important;
+        }
+
+        .gdpr-note {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+            margin-top: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .gdpr-note a { color: var(--gray-light); text-decoration: underline; }
+
+        /* Success state */
+        #mlb2-39806722 .ml-form-successBody {
+            text-align: center;
+        }
+
+        #mlb2-39806722 .ml-form-successContent h4 {
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px !important;
+        }
+
+        #mlb2-39806722 .ml-form-successContent p {
+            color: var(--gray-light) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.95rem !important;
+        }
+
+        /* Trust section */
+        .trust-row {
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 24px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .trust-item i { color: var(--primary); }
+
+        /* Skool banner */
+        .skool-banner {
+            max-width: 1100px;
+            margin: 32px auto 0;
+        }
+        .skool-banner a {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 50%, #ea580c 100%);
+            color: white;
+            padding: 22px 32px;
+            border-radius: 18px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+            transition: all 0.25s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .skool-banner a::before {
+            content: "";
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 50%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .skool-banner a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(220, 38, 38, 0.45);
+        }
+        .skool-banner img {
+            height: 38px; width: auto;
+            background: white;
+            padding: 8px 14px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            position: relative; z-index: 1;
+        }
+        .skool-banner-text { flex: 1; position: relative; z-index: 1; }
+        .skool-banner-text strong { display: block; font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
+        .skool-banner-text span { display: block; font-size: 0.88rem; opacity: 0.92; line-height: 1.4; }
+        .skool-banner-arrow {
+            flex-shrink: 0;
+            background: white; color: #b91c1c;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.3rem;
+            position: relative; z-index: 1;
+            transition: transform 0.25s ease;
+        }
+        .skool-banner a:hover .skool-banner-arrow { transform: translateX(4px); }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 28px;
+            }
+            .hero-left h1 { font-size: 2rem; }
+            .container { padding: 20px 20px 60px; }
+            .top-bar { padding: 20px; }
+            .form-card { padding: 32px 24px; }
+        }
+
+        @media (max-width: 640px) {
+            .skool-banner a { flex-direction: column; text-align: center; gap: 14px; padding: 24px; }
+            .skool-banner-arrow { width: 40px; height: 40px; }
+        }
+
+        @media (max-width: 500px) {
+            .hero-left h1 { font-size: 1.75rem; }
+            .back-link span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="../../index.html" class="logo">
+            <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/1f1ed5c1-53e3-4875-85b6-6f95bf9a1db8/amz.elite_-_konsultacje_amazon_fba.png" alt="Tomasz Mickiewicz">
+            Tomasz Mickiewicz
+        </a>
+        <a href="../../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> <span>Wróć na stronę główną</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+
+            <div class="hero-left">
+                <div class="badge">
+                    <i class="fas fa-gift"></i> Darmowy materiał
+                </div>
+                <h1>Checklista sprzedawcy Amazon - <span class="accent">15 punktów audytu</span> Twojego listingu</h1>
+                <p class="subtitle">Pobierz darmowy PDF i sprawdź krok po kroku, co możesz poprawić w swoim listingu, żeby zwiększyć sprzedaż.</p>
+
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i> 15 konkretnych punktów do sprawdzenia w Twoim listingu</li>
+                    <li><i class="fas fa-check-circle"></i> Oparte na 13 latach sprzedaży na Amazonie</li>
+                    <li><i class="fas fa-check-circle"></i> Format PDF gotowy do druku</li>
+                    <li><i class="fas fa-check-circle"></i> Zero spamu - tylko wartościowy newsletter raz w tygodniu</li>
+                </ul>
+            </div>
+
+            <div class="form-card">
+                <div class="form-card-inner">
+                    <div class="icon-circle">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h2>Wyślij mi PDF</h2>
+                    <p>Podaj swój email, a wyślę Ci checklistę w kilka minut.</p>
+
+                    <!-- MailerLite form -->
+                    <div id="mlb2-39806722" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-39806722">
+                        <div class="ml-form-align-center">
+                            <div class="ml-form-embedWrapper embedForm">
+                                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                    <div class="ml-form-embedContent"></div>
+                                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2263525/forms/184583522823963650/subscribe" data-code="" method="post" target="_blank">
+                                        <div class="ml-form-formContent">
+                                            <div class="ml-form-fieldRow ml-last-item">
+                                                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                    <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="twoj@email.com" autocomplete="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="ml-submit" value="1">
+                                        <div class="ml-form-embedSubmit">
+                                            <button type="submit" class="primary">Pobierz checklistę <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                                <div class="ml-form-embedSubmitLoad"></div>
+                                                <span class="sr-only">Ładowanie...</span>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="anticsrf" value="true">
+                                    </form>
+                                </div>
+                                <div class="ml-form-successBody row-success" style="display: none">
+                                    <div class="ml-form-successContent">
+                                        <div style="font-size: 3rem; color: #dc2626; margin-bottom: 16px;"><i class="fas fa-check-circle"></i></div>
+                                        <h4>Dziękuję!</h4>
+                                        <p>Sprawdź swoją skrzynkę - za chwilę dostaniesz email z linkiem do pobrania checklisty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="gdpr-note">
+                        Zapisujac sie, akceptujesz nasza <a href="../../polityka-prywatnosci/">polityke prywatnosci</a>. Mozesz wypisac sie w kazdej chwili.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="trust-row">
+            <div class="trust-item"><i class="fas fa-shield-halved"></i> Zero spamu</div>
+            <div class="trust-item"><i class="fas fa-lock"></i> Twoje dane sa bezpieczne</div>
+            <div class="trust-item"><i class="fas fa-user-check"></i> Ponad 13 lat doswiadczenia</div>
+        </div>
+
+        <!-- Skool community banner -->
+        <div class="skool-banner">
+            <a href="https://www.skool.com/amzelite-5613" target="_blank">
+                <img src="https://assets.skool.com/skool/skool-logo-white.svg" alt="Skool">
+                <div class="skool-banner-text">
+                    <strong>Dolacz do spolecznosci AMZ Elite</strong>
+                    <span>Darmowe materialy, wsparcie i rozmowy z innymi sprzedawcami Amazon.</span>
+                </div>
+                <div class="skool-banner-arrow">&rarr;</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function ml_webform_success_39806722() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-39806722 .row-success').show();
+            $('.ml-subscribe-form-39806722 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2263525/forms/184583522823963650/takel");
+    </script>
+
+</body>
+</html>

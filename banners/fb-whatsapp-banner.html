@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Facebook Banner - WhatsApp - Tomasz Mickiewicz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+    --primary: #dc2626;
+    --primary-dark: #b91c1c;
+    --dark: #0f172a;
+    --dark-light: #1e293b;
+    --white: #ffffff;
+    --gray: #64748b;
+    --gray-light: #94a3b8;
+    --light: #f8fafc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.banner-instructions {
+    color: white;
+    text-align: center;
+    max-width: 820px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.4);
+    padding: 16px 24px;
+    border-radius: 12px;
+}
+
+.banner-instructions strong { color: var(--primary); }
+
+/* Facebook group cover: 1640 x 624 (wide format) */
+.banner {
+    width: 1640px;
+    height: 624px;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    transform-origin: top center;
+    transform: scale(0.5);
+    margin-bottom: -312px;
+    box-shadow: 0 0 60px rgba(0,0,0,0.3);
+}
+
+/* Subtle grid pattern */
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(15,23,42,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.025) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* Red glow accent top-right */
+.banner::after {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.banner-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 1fr;
+    align-items: center;
+    padding: 70px 90px 70px 100px;
+    gap: 50px;
+}
+
+/* ── LEFT: Text ── */
+.banner-text {
+    color: var(--dark);
+}
+
+.banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: var(--light);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 50px;
+    padding: 12px 22px;
+    margin-bottom: 28px;
+}
+
+.banner-eyebrow i { color: var(--primary); font-size: 1rem; }
+
+.banner h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+    color: var(--dark);
+}
+
+.banner h1 span.accent {
+    color: var(--primary);
+    display: block;
+}
+
+.banner-tagline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 1.5;
+    max-width: 520px;
+    margin-bottom: 32px;
+}
+
+.banner-tagline strong { color: var(--dark); font-weight: 700; }
+
+.banner-stats {
+    display: flex;
+    gap: 44px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.banner-stat-val {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1;
+}
+
+.banner-stat-label {
+    font-size: 0.72rem;
+    color: var(--gray);
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* ── CENTER: Photo ── */
+.banner-photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner-photo::before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 85%;
+    background: radial-gradient(ellipse 55% 55% at center 60%, rgba(220, 38, 38, 0.12) 0%, transparent 65%);
+    z-index: 0;
+}
+
+.banner-photo img {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    filter: drop-shadow(0 16px 40px rgba(0,0,0,0.2));
+}
+
+.banner-photo-placeholder {
+    width: 260px;
+    height: 340px;
+    border-radius: 16px;
+    background: var(--light);
+    border: 2px dashed rgba(15, 23, 42, 0.15);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: rgba(15, 23, 42, 0.2);
+    z-index: 1;
+    position: relative;
+}
+
+/* ── RIGHT: CTA ── */
+.banner-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-cta-box {
+    background: var(--light);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 24px;
+    padding: 36px 32px;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #128c7e;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+}
+
+.cta-label i { font-size: 0.95rem; }
+
+.cta-headline {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.cta-sub {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 14px;
+    padding: 10px;
+    margin: 0 auto 16px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.qr-code img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cta-scan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    padding: 12px 22px;
+    background: #25d366;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.cta-scan i { font-size: 1.1rem; }
+
+/* ── Branding bottom ── */
+.banner-brand {
+    position: absolute;
+    bottom: 28px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--gray);
+    z-index: 3;
+    font-weight: 500;
+}
+
+.banner-brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+.banner-brand span { letter-spacing: 0.02em; }
+.banner-brand strong { color: var(--dark); font-weight: 700; }
+
+.banner-url {
+    position: absolute;
+    bottom: 28px;
+    right: 100px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    z-index: 3;
+}
+</style>
+</head>
+<body>
+
+<div class="banner-instructions">
+    <strong>Banner Facebook 1640x624 px</strong> (wide format)<br>
+    Zrób screenshot samego baneru. W DevTools: prawy klik na .banner → Capture node screenshot.<br>
+    Banner podglądowy jest przeskalowany do 50% - plik wynikowy ma pełny rozmiar.
+</div>
+
+<div class="banner">
+    <div class="banner-inner">
+
+        <!-- LEFT: Text -->
+        <div class="banner-text">
+            <h1>TOMASZ<span class="accent">MICKIEWICZ</span></h1>
+            <p class="banner-tagline">
+                Pomagam sprzedawcom Amazon <strong>skalować biznes i budować niezależność finansową</strong> w oparciu o FBA.
+            </p>
+            <div class="banner-stats">
+                <div>
+                    <div class="banner-stat-val">22</div>
+                    <div class="banner-stat-label">Lata w e-commerce</div>
+                </div>
+                <div>
+                    <div class="banner-stat-val">13</div>
+                    <div class="banner-stat-label">Lat na Amazonie</div>
+                </div>
+                <div>
+                    <div class="banner-stat-val">3</div>
+                    <div class="banner-stat-label">Marki własne</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTER: Photo -->
+        <div class="banner-photo">
+            <img src="../assets/img/tomasz.png" alt="Tomasz Mickiewicz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="banner-photo-placeholder"><i class="fas fa-user"></i></div>
+        </div>
+
+        <!-- RIGHT: WhatsApp CTA -->
+        <div class="banner-cta">
+            <div class="banner-cta-box">
+                <div class="cta-label"><i class="fab fa-whatsapp"></i> Grupa WhatsApp</div>
+                <div class="cta-headline">Dołącz do społeczności</div>
+                <p class="cta-sub">Praktyczne wskazówki i pomoc dla sprzedawców Amazon.</p>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fchat.whatsapp.com%2FEegt1u46ypvG1voAzDhwvY%3Fmode%3Dgi_t&margin=0" alt="QR WhatsApp">
+                </div>
+                <div class="cta-scan">
+                    <i class="fas fa-qrcode"></i> Zeskanuj i dołącz
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom branding -->
+    <div class="banner-brand">
+        <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/1f1ed5c1-53e3-4875-85b6-6f95bf9a1db8/amz.elite_-_konsultacje_amazon_fba.png" alt="amz.elite">
+        <span><strong>amz.elite</strong>  •  Newsletter • YouTube • Konsultacje</span>
+    </div>
+    <div class="banner-url">tomaszmickiewicz.eu</div>
+
+</div>
+
+</body>
+</html>

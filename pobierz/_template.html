@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TEMPLATE: Update title and description -->
+    <title>{{TYTUL}} - Tomasz Mickiewicz</title>
+    <meta name="description" content="{{META_OPIS}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tomaszmickiewicz.eu/pobierz/{{SLUG}}/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tomasz Mickiewicz - AMZ Elite">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:url" content="https://tomaszmickiewicz.eu/pobierz/{{SLUG}}/">
+    <meta property="og:title" content="{{TYTUL}}">
+    <meta property="og:description" content="{{META_OPIS}}">
+    <meta property="og:image" content="https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/1f1ed5c1-53e3-4875-85b6-6f95bf9a1db8/amz.elite_-_konsultacje_amazon_fba.png">
+
+    <link rel="icon" type="image/png" href="https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/1f1ed5c1-53e3-4875-85b6-6f95bf9a1db8/amz.elite_-_konsultacje_amazon_fba.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            min-height: 100vh;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        /* Top bar with logo */
+        .top-bar {
+            padding: 24px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--primary); }
+
+        /* Main layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 64px;
+            align-items: center;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 64px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-left .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(220, 38, 38, 0.08);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero-left h1 .accent { color: var(--primary); }
+
+        .hero-left .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--dark-light);
+        }
+
+        .benefits i {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        /* Form card */
+        .form-card {
+            background: var(--dark);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .form-card-inner { position: relative; z-index: 1; }
+
+        .form-card .icon-circle {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+        }
+
+        .form-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .form-card p {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        /* ══════════════════════════════════════
+           MAILERLITE FORM OVERRIDES
+           TEMPLATE: Replace {{FORM_ID}} with your MailerLite form ID
+           Example: mlb2-39806722
+           ══════════════════════════════════════ */
+        #{{FORM_ID}} .ml-form-embedBody,
+        #{{FORM_ID}} .ml-form-successBody {
+            padding: 0 !important;
+        }
+
+        #{{FORM_ID}} .ml-form-embedWrapper {
+            background: transparent !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            display: block !important;
+        }
+
+        #{{FORM_ID}} .ml-form-embedContent { display: none !important; }
+        #{{FORM_ID}} .ml-form-formContent { margin: 0 0 16px 0 !important; }
+
+        #{{FORM_ID}} input[type="email"] {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1rem !important;
+            padding: 16px 20px !important;
+            border-radius: 12px !important;
+            transition: all 0.2s;
+        }
+
+        #{{FORM_ID}} input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        #{{FORM_ID}} input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary) !important;
+            background: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        #{{FORM_ID}} .ml-form-embedSubmit { margin: 0 !important; }
+
+        #{{FORM_ID}} .ml-form-embedSubmit button[type="submit"] {
+            background: var(--primary) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            padding: 16px 24px !important;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+            width: 100% !important;
+        }
+
+        #{{FORM_ID}} .ml-form-embedSubmit button[type="submit"]:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        #{{FORM_ID}} .ml-form-embedSubmit button.loading {
+            background: var(--primary) !important;
+            border-radius: 50px !important;
+        }
+
+        .gdpr-note {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+            margin-top: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .gdpr-note a { color: var(--gray-light); text-decoration: underline; }
+
+        /* Success state */
+        #{{FORM_ID}} .ml-form-successBody {
+            text-align: center;
+        }
+
+        #{{FORM_ID}} .ml-form-successContent h4 {
+            color: var(--white) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px !important;
+        }
+
+        #{{FORM_ID}} .ml-form-successContent p {
+            color: var(--gray-light) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.95rem !important;
+        }
+
+        /* Trust section */
+        .trust-row {
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 24px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .trust-item i { color: var(--primary); }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 28px;
+            }
+            .hero-left h1 { font-size: 2rem; }
+            .container { padding: 20px 20px 60px; }
+            .top-bar { padding: 20px; }
+            .form-card { padding: 32px 24px; }
+        }
+
+        @media (max-width: 500px) {
+            .hero-left h1 { font-size: 1.75rem; }
+            .back-link span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="../../index.html" class="logo">
+            <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/1f1ed5c1-53e3-4875-85b6-6f95bf9a1db8/amz.elite_-_konsultacje_amazon_fba.png" alt="Tomasz Mickiewicz">
+            Tomasz Mickiewicz
+        </a>
+        <a href="../../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> <span>Wroc na strone glowna</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+
+            <div class="hero-left">
+                <div class="badge">
+                    <!-- TEMPLATE: Change icon and badge text -->
+                    <i class="fas fa-gift"></i> Darmowy material
+                </div>
+                <!-- TEMPLATE: Update headline, subtitle, and benefits -->
+                <h1>{{NAGLOWEK}} - <span class="accent">{{AKCENT}}</span></h1>
+                <p class="subtitle">{{PODTYTUL}}</p>
+
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i> {{BENEFIT_1}}</li>
+                    <li><i class="fas fa-check-circle"></i> {{BENEFIT_2}}</li>
+                    <li><i class="fas fa-check-circle"></i> {{BENEFIT_3}}</li>
+                    <li><i class="fas fa-check-circle"></i> Zero spamu - tylko wartosciowy newsletter raz w tygodniu</li>
+                </ul>
+            </div>
+
+            <div class="form-card">
+                <div class="form-card-inner">
+                    <div class="icon-circle">
+                        <!-- TEMPLATE: Change icon (fas fa-file-pdf, fas fa-book, fas fa-list-check, etc.) -->
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <!-- TEMPLATE: Update form card heading and description -->
+                    <h2>{{FORM_NAGLOWEK}}</h2>
+                    <p>{{FORM_OPIS}}</p>
+
+                    <!-- ══════════════════════════════════════
+                         MAILERLITE EMBEDDED FORM
+                         TEMPLATE: Replace entire block below with your MailerLite embed code
+                         1. Create form in MailerLite (Subscribers > Forms > Embedded)
+                         2. Copy the HTML embed code
+                         3. Paste here replacing this placeholder block
+                         4. Update {{FORM_ID}} in CSS above to match the form's mlb2-XXXXX id
+                         5. Update the ml_webform_success_XXXXX function name in script below
+                         ══════════════════════════════════════ -->
+                    <div id="{{FORM_ID}}" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-{{FORM_ID_NUM}}">
+                        <div class="ml-form-align-center">
+                            <div class="ml-form-embedWrapper embedForm">
+                                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                    <div class="ml-form-embedContent"></div>
+                                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/{{ACCOUNT_ID}}/forms/{{FORM_CODE}}/subscribe" data-code="" method="post" target="_blank">
+                                        <div class="ml-form-formContent">
+                                            <div class="ml-form-fieldRow ml-last-item">
+                                                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                    <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="twoj@email.com" autocomplete="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="ml-submit" value="1">
+                                        <div class="ml-form-embedSubmit">
+                                            <!-- TEMPLATE: Update button text -->
+                                            <button type="submit" class="primary">{{BUTTON_TEXT}} <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                                <div class="ml-form-embedSubmitLoad"></div>
+                                                <span class="sr-only">Ladowanie...</span>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="anticsrf" value="true">
+                                    </form>
+                                </div>
+                                <div class="ml-form-successBody row-success" style="display: none">
+                                    <div class="ml-form-successContent">
+                                        <div style="font-size: 3rem; color: #dc2626; margin-bottom: 16px;"><i class="fas fa-check-circle"></i></div>
+                                        <h4>Dziekuje!</h4>
+                                        <!-- TEMPLATE: Update success message -->
+                                        <p>Sprawdz swoja skrzynke - za chwile dostaniesz email z linkiem do pobrania.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="gdpr-note">
+                        Zapisujac sie, akceptujesz nasza <a href="#">polityke prywatnosci</a>. Mozesz wypisac sie w kazdej chwili.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="trust-row">
+            <div class="trust-item"><i class="fas fa-shield-halved"></i> Zero spamu</div>
+            <div class="trust-item"><i class="fas fa-lock"></i> Twoje dane sa bezpieczne</div>
+            <div class="trust-item"><i class="fas fa-user-check"></i> Ponad 13 lat doswiadczenia</div>
+        </div>
+    </div>
+
+    <!-- TEMPLATE: Update the function name to match your form ID -->
+    <script>
+        function ml_webform_success_{{FORM_ID_NUM}}() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-{{FORM_ID_NUM}} .row-success').show();
+            $('.ml-subscribe-form-{{FORM_ID_NUM}} .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+    <!-- TEMPLATE: Update the takel URL with your account and form IDs -->
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/{{ACCOUNT_ID}}/forms/{{FORM_CODE}}/takel");
+    </script>
+
+</body>
+</html>
