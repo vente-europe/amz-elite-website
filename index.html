@@ -943,8 +943,10 @@
            ══════════════════════════════════════ */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* 3rd card hidden - change back to 3 when restored */
             gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .pricing-card {
@@ -1922,10 +1924,10 @@
                 <a href="#kontakt" class="pricing-btn pricing-btn-outline">Umów sesję</a>
             </div>
 
-            <!-- Card 3: Sesja strategiczna PLUS (najpopularniejsza) -->
+            <!-- Card 3: Sesja strategiczna PLUS (najpopularniejsza) - HIDDEN TEMPORARILY, restore later -->
+            <!--
             <div class="pricing-card featured">
-                <!-- <span class="pricing-badge">Najpopularniejsza</span> -->
-
+                <span class="pricing-badge">Najpopularniejsza</span>
                 <div class="pricing-icon"><i class="fas fa-star"></i></div>
                 <h3>Sesja strategiczna PLUS</h3>
                 <div class="price">€289</div>
@@ -1949,6 +1951,8 @@
                 </ul>
                 <a href="#kontakt" class="pricing-btn pricing-btn-primary">Umów sesję PLUS</a>
             </div>
+            -->
+
         </div>
     </div>
 </section>
