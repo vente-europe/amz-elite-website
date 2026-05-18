@@ -38,6 +38,21 @@ Tool names also stay English: Helium 10, DataDive, Asinsight, Sellersprite, Jung
 - Logical flow: intro (what & why it matters) → analysis → implications for Polish sellers → praktyczne wnioski / TL;DR.
 - Intro: 2-4 zdania, rzeczowo. Bez clickbaitu.
 
+## People-first writing (Google content guidance)
+
+Google's AI features (AI Overviews, AI Mode) rank on normal Search - good, people-first
+content IS the optimization. No special "AI style". Concretely:
+
+- **Answer the reader's core question clearly in the intro.** Do not bury the payoff at
+  the bottom. A reader should know within the first paragraph what they will get.
+- **Headings must be descriptive.** Someone scanning only the H2/H3 headings should
+  understand the whole post. Avoid vague headers like "Wstęp" or "Część druga".
+- **Lean on first-hand experience.** Tom's own data, named cases, concrete numbers, dates,
+  marketplaces. This non-commodity, expert-led content is exactly what Google rewards over
+  generic "7 porad" articles - and AI Overviews preferentially cite first-hand sources.
+- Keep the metaphor-density rule, the no-em-dash rule, and the no-clickbait rule below -
+  people-first does not mean dry or generic, it means useful and genuinely Tom's.
+
 ## Length
 
 - **No hard cap.** This is a blog, not a news brief. 800-2000 words is the sweet spot, longer is fine if the topic deserves it.
@@ -85,7 +100,9 @@ title: [Polish H1]
 slug: [url-slug]
 category: [Amazon PPC / Product Research / Strategy / ...]
 excerpt: [1-2 sentence hook, for card]
+meta_description: [~150-160 chars, written for search CTR, distinct from excerpt]
 read_time: [X min]
+internal_links: [slug-1, slug-2, slug-3]
 source_url: [original EN url]
 draft_date: YYYY-MM-DD
 status: draft
@@ -93,9 +110,28 @@ status: draft
 
 # [Polish H1]
 
-[Polish body with H2/H3, bullets, blockquotes, etc. - NO source/Inspiracja line at the end]
+[Polish body with H2/H3, bullets, blockquotes, etc. Each H2 a descriptive section.
+Link in-body to the `internal_links` posts with natural anchor text + one service anchor.
+NO source/Inspiracja line at the end.]
 
 ---
+
+## ✅ Key takeaways (post-takeaways box)
+
+- [Takeaway 1]
+- [Takeaway 2]
+- [Takeaway 3]
+
+## ❓ FAQ (post-faq section + FAQPage JSON-LD)
+
+**P: [Pytanie 1?]**
+O: [Zwięzła odpowiedź 1.]
+
+**P: [Pytanie 2?]**
+O: [Zwięzła odpowiedź 2.]
+
+**P: [Pytanie 3?]**
+O: [Zwięzła odpowiedź 3.]
 
 ## 🎨 Nano Banana thumbnail prompt
 
@@ -103,7 +139,8 @@ status: draft
 
 ## 🖼️ In-article image suggestions
 
-[Either: downloaded images listed with paths, OR Google search queries user can run]
+[Either: downloaded images listed with paths, OR Google search queries user can run.
+Each image MUST have a specific descriptive alt text listed.]
 
 ## 📋 Ready-to-publish checklist
 

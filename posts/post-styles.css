@@ -16,6 +16,8 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-padding-top: 90px; }
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--white);
@@ -25,7 +27,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; border-radius: 8px; }
+img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
 
 /* ── Floating Pill Nav (same as main site) ── */
 body { padding-top: 80px; }
@@ -460,9 +462,96 @@ article {
     .skool-post-banner-arrow { width: 40px; height: 40px; }
 }
 
+/* ── Key Takeaways box (post-takeaways) ── */
+.post-content .post-takeaways {
+    background: var(--light);
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 16px 16px 0;
+    padding: 22px 28px;
+    margin: 32px 0;
+}
+.post-content .post-takeaways-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+.post-content .post-takeaways-title i { color: var(--primary); }
+.post-content .post-takeaways ul {
+    margin: 0 0 0 20px;
+    color: var(--dark);
+}
+.post-content .post-takeaways li { margin-bottom: 8px; }
+.post-content .post-takeaways li:last-child { margin-bottom: 0; }
+.post-content .post-takeaways li::marker { color: var(--primary); }
+
+/* ── FAQ section (post-faq) ── */
+.post-content .post-faq { margin: 8px 0 16px; }
+.post-content .post-faq-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+}
+.post-content .post-faq-item:first-child { border-top: none; padding-top: 4px; }
+.post-content .post-faq-item:last-child { padding-bottom: 0; }
+.post-content .post-faq-item h3 {
+    margin: 0 0 8px;
+    font-size: 1.08rem;
+}
+.post-content .post-faq-item p { margin-bottom: 0; }
+
+/* ── Author bio box (post-author) ── */
+.post-content .post-author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--light);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 40px 0;
+}
+.post-content .post-author img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    box-shadow: none;
+    border: 3px solid var(--primary);
+}
+.post-content .post-author-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+.post-content .post-author-name {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+.post-content .post-author p {
+    margin: 0;
+    font-size: 0.92rem;
+}
+.post-content .post-author a { color: var(--primary); font-weight: 600; }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
     .post-title { font-size: 1.7rem; }
     .post-hero-img { height: 220px; }
     article { padding: 24px 16px 48px; }
+    .post-content .post-author { flex-direction: column; text-align: center; gap: 14px; }
 }
