@@ -21,17 +21,27 @@
 
 - [ ] **Email delivery + thank-you landing produkcja** — **next:** wgrać plik dostawy gdzieś (Drive/Dropbox/hosting), zamienić `LINK_DO_PLIKU` w obu HTMLach na URL — owner: Tom — eta: tydzień
 - [ ] **MailerLite automation** — **next:** delete old email step → add new with Custom HTML, ustawić redirect po signup → tomaszmickiewicz.eu/thank-you.html — blocker: musi być po wgraniu pliku dostawy
-- [ ] **Blog post Rufus - update** — **next:** review zaktualizowanej wersji w Obsidianie (mniej metafor, bardziej technicznie), opublikować na żywo
-- [ ] **Key takeaways + FAQ - retrofit 2 istniejących postów** — **next:** napisać realne wnioski (3-5 bullet) + FAQ (3-6 pytań) + wstawić `post-takeaways` + `post-faq` + FAQPage JSON-LD do `jak-ai-zmienia-amazon-ads-2026` i `jak-zoptymalizowac-listing-pod-amazon-rufus` (3 generyczne posty usunięte 2026-05-19; nowy post `alexa-for-shopping-co-z-rufusem` urodził się z takeaways+FAQ). Author box już dodany, brakuje tylko treści. Patrz `SEO-CHECKLIST.md`
-- [ ] **SEO post-deploy weryfikacja** — **next:** po deployu uruchomić Rich Results Test + Schema Validator na postach (BlogPosting/BreadcrumbList), Lighthouse (CLS), zgłosić `sitemap.xml` w Google Search Console
+- [ ] **Blog post Rufus - update** — **next:** review zaktualizowanej wersji w Obsidianie (mniej metafor, bardziej technicznie), opublikować na żywo @2026-05-20
+- [ ] **Key takeaways + FAQ - retrofit 2 istniejących postów** — **next:** napisać realne wnioski (3-5 bullet) + FAQ (3-6 pytań) + wstawić `post-takeaways` + `post-faq` + FAQPage JSON-LD do `jak-ai-zmienia-amazon-ads-2026` i `jak-zoptymalizowac-listing-pod-amazon-rufus` (3 generyczne posty usunięte 2026-05-19; nowy post `alexa-for-shopping-co-z-rufusem` urodził się z takeaways+FAQ). Author box już dodany, brakuje tylko treści. Patrz `SEO-CHECKLIST.md` @2026-05-20
+- [ ] **SEO post-deploy weryfikacja** — **next:** po deployu uruchomić Rich Results Test + Schema Validator na postach (BlogPosting/BreadcrumbList), Lighthouse (CLS), zgłosić `sitemap.xml` w Google Search Console @2026-05-20
 - [ ] **Cal.com booking popup na stronie** — **next:** Tom zakłada konto Cal.com + event typy (1 bezpłatna konsultacja + płatne sesje strategiczne, Stripe connected), wysyła linki → Claude dodaje popup buttony do `index.html` (CTA w sekcji Kontakt + "Zarezerwuj" na kartach Konsultacje) — owner: Tom — **Due: 2026-05-25**
-- [ ] **Dodać stronę do indeksowania w Google** — **next:** skonfigurować i zweryfikować property w Google Search Console (weryfikacja przez DNS - teraz łatwa, bo DNS jest w IONOS), zgłosić `sitemap.xml`, poprosić o zindeksowanie kluczowych stron. Częściowo pokrywa się z "SEO post-deploy weryfikacja" (samo zgłoszenie sitemap)
+- [ ] **Dodać stronę do indeksowania w Google** — **next:** skonfigurować i zweryfikować property w Google Search Console (weryfikacja przez DNS - teraz łatwa, bo DNS jest w IONOS), zgłosić `sitemap.xml`, poprosić o zindeksowanie kluczowych stron. Częściowo pokrywa się z "SEO post-deploy weryfikacja" (samo zgłoszenie sitemap) @2026-05-19
 
 ---
 
 ## Pending Decisions
 
 _(brak otwartych decyzji)_
+
+---
+
+## Blog
+
+> Pipeline: web clip z tagiem `blog` w `00-Web-Inbox/` → daily review (`daily-prep`) tworzy draft w `Website/posts/` i dopisuje go tutaj → `opublikuj post [slug]` publikuje na żywo. Zawsze publikuj najstarszy dostępny draft.
+
+### Drafty czekające na publikację
+
+_(brak - wszystko opublikowane)_
 
 ---
 

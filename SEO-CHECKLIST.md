@@ -150,12 +150,13 @@ links stay at the bottom of `<head>`, after the JSON-LD.)
 
 Order inside `<article>` / `.post-content`:
 
-1. **Intro** - 2-4 sentences. Answer the reader's core question here; do not bury it.
-2. **Key takeaways box** (`div.post-takeaways`) - short TL;DR, right after the intro, so
-   readers and AI get the answer fast.
-3. **Body** - `<h2>` sections (3-7), `<h3>` sub-points where useful. Every `<h2>` gets a
+1. **Intro** - 2-4 sentences. Answer the reader's core question here; do not bury it. The
+   intro prose carries the "answer early" job - so the takeaways box does NOT sit at the top.
+2. **Body** - `<h2>` sections (3-7), `<h3>` sub-points where useful. Every `<h2>` gets a
    slugified `id` attribute for deep linking (e.g. `<h2 id="struktura-kampanii">`).
-4. **Skool community banner** - mid-article (see `new-blog-post` skill for placement).
+3. **Skool community banner** - mid-article (see `new-blog-post` skill for placement).
+4. **Key takeaways box** (`div.post-takeaways`) - the closing summary. Placed at the END of
+   the body, directly **before the FAQ**. Titled "Najważniejsze wnioski".
 5. **FAQ section** (`h2` + `div.post-faq`) - 3-6 real questions, concise answers. Last
    `<h2>` before the CTA. Mirror it in the `FAQPage` JSON-LD.
 6. **Author bio box** (`div.post-author`) - photo + credential line, links to
@@ -181,6 +182,9 @@ Component markup is defined in the `new-blog-post` skill template; CSS lives in
 - The first-paint / hero / LCP image stays **eager** - never `loading="lazy"` on it.
 - `alt` text is **specific and descriptive** of what the image shows - never the post
   title reused on every image.
+- **In-article images get a short visible caption.** Put a `<p class="img-caption">` line
+  directly below the image (the `.img-caption` style already exists in `post-styles.css`).
+  The caption is reader-facing; the `alt` stays separate, for SEO/accessibility.
 
 ---
 
