@@ -66,7 +66,7 @@ match this structurally. Placeholders in `{{...}}`:
 | `{{OG_DESCRIPTION}}` | Social-share description (may equal META_DESCRIPTION, shorter is fine) |
 | `{{SLUG}}` | URL slug, e.g. `jak-skalowac-ppc-2026` |
 | `{{CATEGORY}}` | Article section, e.g. `Amazon PPC` |
-| `{{IMAGE_URL}}` | Absolute https URL of the share image. If the post has a thumbnail use `https://tomaszmickiewicz.eu/assets/img/blog/{{SLUG}}.png`; if not, fall back to the profile picture URL used by older posts. |
+| `{{IMAGE_URL}}` | Absolute https URL of the share image. If the post has a thumbnail use `https://tomaszmickiewicz.eu/assets/img/blog/{{SLUG}}.jpg`; if not, fall back to the profile picture URL used by older posts. |
 | `{{DATE_ISO}}` | Publish date, `YYYY-MM-DD` |
 | `{{DATE_MODIFIED_ISO}}` | Last-modified date, `YYYY-MM-DD`. Equals `{{DATE_ISO}}` on publish; bump it whenever the post is edited. |
 | `{{BREADCRUMB_NAME}}` | Short post name for breadcrumb position 3 |
@@ -169,6 +169,12 @@ Component markup is defined in the `new-blog-post` skill template; CSS lives in
 
 ## Image rules
 
+- **Thumbnails / hero images must be compressed before they go live.** Resize the file to
+  max ~1600 px on the long edge and export as **JPG** (quality ~85-88) - target well under
+  ~300 KB. A multi-MB PNG straight from an image generator is never acceptable as a hero
+  image; it wrecks LCP. The thumbnail ships as `assets/img/blog/[slug].jpg` - use the `.jpg`
+  extension in every reference (hero `<img>`, `og:image`, `twitter:image`, JSON-LD `image`,
+  index/blog cards).
 - Every `<img>` carries explicit `width` and `height` (the real pixel dimensions of the
   file) so the browser reserves space and layout does not shift (CLS).
 - Below-the-fold images get `loading="lazy"` and `decoding="async"`.
