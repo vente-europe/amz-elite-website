@@ -75,4 +75,5 @@ _(brak otwartych decyzji)_
 - `blog-data.js` legacy - nie używać, edytować HTML directly
 - **SEO:** każdy nowy/edytowany post musi spełniać `SEO-CHECKLIST.md` (head block, takeaways/FAQ/author, obrazy width/height + lazy, sitemap + blog.html JSON-LD)
 - Deploy: branch `main` → GitHub Pages serwuje `main` (repo `vente-europe/amz-elite-website`). Push wymaga konta z write-access do org `vente-europe`
+- **DNS:** zarządzany w IONOS (1&1) - migracja z Hekko/cyber-folks zakończona 2026-05-19. Komplet rekordów strefy w `domain-migration.md`
 - `landing/` jest w `.gitignore` (legacy, nie deployowane) - live landing to tylko `pobierz/checklist/`
