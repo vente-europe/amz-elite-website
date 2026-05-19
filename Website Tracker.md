@@ -47,7 +47,7 @@ _(brak - wszystko opublikowane)_
 
 ## Backlog
 
-- [ ] **Rufus Audit - darmowy lead magnet** (inspiracja: https://www.ppcninja.com/rufus-audit.html) — model freemium: landing page + formularz z ASIN → dostarczony audyt listingu pod Rufus / AI search (PDF) → upsell na płatną Analizę Listingu / Sesję strategiczną. Pasuje 1:1 do kompetencji "Rufus & AI Search". Do przemyślenia: zakres audytu, sposób dostarczania, ile automatyzacji vs ręcznie.
+- [ ] **Rufus Audit - darmowy lead magnet** (inspiracja: https://www.ppcninja.com/rufus-audit.html) — model freemium: landing page + formularz z ASIN → dostarczony audyt listingu pod Rufus / AI search (PDF) → upsell na płatną Analizę Opinii (VOC) / Sesję strategiczną. Pasuje 1:1 do kompetencji "Rufus & AI Search". Do przemyślenia: zakres audytu, sposób dostarczania, ile automatyzacji vs ręcznie.
 - [ ] Stworzyć kolejny lead magnet (po checklist) — research jakie tematy
 - [ ] Footer banner przewijający do Skool community na każdej stronie
 - [ ] Dodać kategorie do bloga (filter by AI/Rufus/PPC/Listing)

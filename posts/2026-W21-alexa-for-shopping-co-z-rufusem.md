@@ -71,7 +71,7 @@ Konkretnie, w tej kolejności:
 - **Potem przejrzyj niedoceniane powierzchnie.** A+ Content agent czyta nie jako marketing, tylko jako dodatkowe pokrycie Q&A i kontekstu użycia. Zdjęcia czyta wizualnie - rozpoznaje, co pokazują, nie tylko czy się ładują. Recenzje wchodzą do oceny listingu, więc liczy się ich świeżość i odpowiedzi na te negatywne. Brand Registry odblokowuje część tych powierzchni.
 - **Nie wyrzucaj warstwy keywordowej.** Stary A9 wciąż napędza ranking organiczny, a listing bez podstaw keywordowych nie dotrze do powierzchni, na której agent w ogóle go przeczyta. Warstwa AI siedzi na keywordach, nie zamiast nich.
 
-Jeśli chcesz, żeby ktoś przeszedł przez konkretny listing pod tym kątem, od tego jest [Analiza Listingu](../index.html#konsultacje) - dziewięć punktów kontrolnych, w tym pokrycie Q&A i czytelność dla AI. Więcej o tym, co dokładnie czyta ten silnik, jest w tekście [jak zoptymalizować listing pod Amazon Rufus](jak-zoptymalizowac-listing-pod-amazon-rufus.html), a o tym, jak AI przestawia reklamę - w analizie [jak AI zmienia Amazon Ads w 2026](jak-ai-zmienia-amazon-ads-2026.html).
+Jeśli chcesz, żeby ktoś przeszedł przez konkretny listing pod tym kątem, od tego jest [Analiza Opinii (VOC) + Analiza Marketingowa](../index.html#konsultacje) - głos klienta z setek opinii, claimy konkurencji i luki rynkowe w jednym dashboardzie, czyli surowiec do listingu, który faktycznie odpowiada na pytania kupujących. Więcej o tym, co dokładnie czyta ten silnik, jest w tekście [jak zoptymalizować listing pod Amazon Rufus](jak-zoptymalizowac-listing-pod-amazon-rufus.html), a o tym, jak AI przestawia reklamę - w analizie [jak AI zmienia Amazon Ads w 2026](jak-ai-zmienia-amazon-ads-2026.html).
 
 [CTA]
 
