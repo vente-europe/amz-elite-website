@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **In Progress** | 4 |
+| **In Progress** | 3 |
 | **Pending Decisions** | 0 |
 | **Backlog** | 10 |
 | **Recently Completed** | 10 |
@@ -21,7 +21,6 @@
 
 - [ ] **Email delivery + thank-you landing produkcja** — **next:** wgrać plik dostawy gdzieś (Drive/Dropbox/hosting), zamienić `LINK_DO_PLIKU` w obu HTMLach na URL — owner: Tom — eta: tydzień
 - [ ] **MailerLite automation** — **next:** delete old email step → add new with Custom HTML, ustawić redirect po signup → tomaszmickiewicz.eu/thank-you.html — blocker: musi być po wgraniu pliku dostawy
-- [ ] **Key takeaways + FAQ - retrofit 2 istniejących postów** — **next:** napisać realne wnioski (3-5 bullet) + FAQ (3-6 pytań) + wstawić `post-takeaways` + `post-faq` + FAQPage JSON-LD do `jak-ai-zmienia-amazon-ads-2026` i `jak-zoptymalizowac-listing-pod-amazon-rufus` (3 generyczne posty usunięte 2026-05-19; nowy post `alexa-for-shopping-co-z-rufusem` urodził się z takeaways+FAQ). Author box już dodany, brakuje tylko treści. Patrz `SEO-CHECKLIST.md` @2026-05-20
 - [ ] **Cal.com booking popup na stronie** — **next:** Tom zakłada konto Cal.com + event typy (1 bezpłatna konsultacja + płatne sesje strategiczne, Stripe connected), wysyła linki → Claude dodaje popup buttony do `index.html` (CTA w sekcji Kontakt + "Zarezerwuj" na kartach Konsultacje) — owner: Tom — **Due: 2026-05-25**
 
 ---
@@ -62,6 +61,8 @@ _(brak - wszystko opublikowane)_
 
 | Date | Item |
 |------|------|
+| 2026-06-02 | Rufus → Alexa for Shopping rebrand w `jak-zoptymalizowac-listing-pod-amazon-rufus.html`: title + meta + JSON-LD + body (z polskimi deklinacjami) + post-tag + intro callout z linkiem do Alexa posta + zaktualizowane karty w index/blog. URL/filename zachowany dla SEO |
+| 2026-06-02 | FAQ retrofit 2 postów: dodane 5-pytaniowe sekcje FAQ + FAQPage JSON-LD do `jak-ai-zmienia-amazon-ads-2026.html` i `jak-zoptymalizowac-listing-pod-amazon-rufus.html`. Zamyka task "Key takeaways + FAQ retrofit" |
 | 2026-06-02 | SEO post-deploy weryfikacja: JSON-LD walidacja 3 postów (BlogPosting + BreadcrumbList wszędzie OK, FAQPage tylko w `alexa-for-shopping`), statyczny audyt CLS - 2 fixy zaaplikowane: `index.html` hero photo + `blog.html` nav logo dostały `width`/`height` attrs. Live Lighthouse PSI nieuruchomiony (API key needed) - manual check na pagespeed.web.dev pozostaje opcjonalny |
 | 2026-06-02 | Blog post Rufus - update (mniej metafor, bardziej technicznie) opublikowany na żywo |
 | 2026-05-19 | Property w Google Search Console zweryfikowana (DNS TXT przez IONOS), sitemap.xml zgłoszony, indeksacja zainicjowana |
@@ -70,8 +71,6 @@ _(brak - wszystko opublikowane)_
 | 2026-05-18 | SEO/AI optimization pass per Google guide - SEO-CHECKLIST.md, optimized post template + skills, sitemap, image perf, `<main>`, author boxes - deployed live (commit 80cf63f) |
 | 2026-05-18 | Author bio box dodany do wszystkich 5 postów (rozstrzyga decyzję "author signature na końcu") |
 | 2026-05-01 | Email delivery template HTML + Skool banner |
-| 2026-05-01 | Thank-you landing page HTML + Skool banner |
-| 2026-05-01 | Blog post Rufus - rewrite (mniej metafor, bardziej technicznie) |
 
 ---
 
