@@ -2,7 +2,7 @@
 
 > Blog pipeline + lead magnets + email delivery + social media. Aggregator skanuje In Progress + Pending Decisions.
 
-**Last updated:** 2026-05-19
+**Last updated:** 2026-06-02
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **In Progress** | 7 |
+| **In Progress** | 4 |
 | **Pending Decisions** | 0 |
 | **Backlog** | 10 |
 | **Recently Completed** | 10 |
@@ -21,11 +21,8 @@
 
 - [ ] **Email delivery + thank-you landing produkcja** — **next:** wgrać plik dostawy gdzieś (Drive/Dropbox/hosting), zamienić `LINK_DO_PLIKU` w obu HTMLach na URL — owner: Tom — eta: tydzień
 - [ ] **MailerLite automation** — **next:** delete old email step → add new with Custom HTML, ustawić redirect po signup → tomaszmickiewicz.eu/thank-you.html — blocker: musi być po wgraniu pliku dostawy
-- [ ] **Blog post Rufus - update** — **next:** review zaktualizowanej wersji w Obsidianie (mniej metafor, bardziej technicznie), opublikować na żywo @2026-05-20
 - [ ] **Key takeaways + FAQ - retrofit 2 istniejących postów** — **next:** napisać realne wnioski (3-5 bullet) + FAQ (3-6 pytań) + wstawić `post-takeaways` + `post-faq` + FAQPage JSON-LD do `jak-ai-zmienia-amazon-ads-2026` i `jak-zoptymalizowac-listing-pod-amazon-rufus` (3 generyczne posty usunięte 2026-05-19; nowy post `alexa-for-shopping-co-z-rufusem` urodził się z takeaways+FAQ). Author box już dodany, brakuje tylko treści. Patrz `SEO-CHECKLIST.md` @2026-05-20
-- [ ] **SEO post-deploy weryfikacja** — **next:** po deployu uruchomić Rich Results Test + Schema Validator na postach (BlogPosting/BreadcrumbList), Lighthouse (CLS), zgłosić `sitemap.xml` w Google Search Console @2026-05-20
 - [ ] **Cal.com booking popup na stronie** — **next:** Tom zakłada konto Cal.com + event typy (1 bezpłatna konsultacja + płatne sesje strategiczne, Stripe connected), wysyła linki → Claude dodaje popup buttony do `index.html` (CTA w sekcji Kontakt + "Zarezerwuj" na kartach Konsultacje) — owner: Tom — **Due: 2026-05-25**
-- [ ] **Dodać stronę do indeksowania w Google** — **next:** skonfigurować i zweryfikować property w Google Search Console (weryfikacja przez DNS - teraz łatwa, bo DNS jest w IONOS), zgłosić `sitemap.xml`, poprosić o zindeksowanie kluczowych stron. Częściowo pokrywa się z "SEO post-deploy weryfikacja" (samo zgłoszenie sitemap) @2026-05-19
 
 ---
 
@@ -37,7 +34,7 @@ _(brak otwartych decyzji)_
 
 ## Blog
 
-> Pipeline: web clip z tagiem `blog` w `00-Web-Inbox/` → daily review (`daily-prep`) tworzy draft w `Website/posts/` i dopisuje go tutaj → `opublikuj post [slug]` publikuje na żywo. Zawsze publikuj najstarszy dostępny draft.
+> Pipeline: web clip z tagiem `blog` w `00-Web-Inbox/` → daily review (`daily-prep`) tworzy draft w `Website/Blog/` i dopisuje go tutaj → `opublikuj post [slug]` publikuje na żywo (HTML ląduje w `Website/posts/`). Zawsze publikuj najstarszy dostępny draft.
 
 ### Drafty czekające na publikację
 
@@ -57,6 +54,7 @@ _(brak - wszystko opublikowane)_
 - [ ] Topic-cluster pillar pages (Product Research / PPC / Listing / Strategy) + interlinking — daje cele dla reguły internal-linking
 - [ ] First-hand case study posty — własne marki, własne liczby (non-commodity content, AI Overviews chętniej cytują first-hand)
 - [ ] Glossary / definicje pojęć Amazon (ACoS, TACoS, Buy Box, Brand Registry, Rufus) — krótkie, dobrze ustrukturyzowane explainery
+- [ ] Dodac podstrone z przykladowym statycznym REview Analyserem i polaczyc z oferta Analizy VOC i cennikiem @2026-05-22
 
 ---
 
@@ -64,6 +62,9 @@ _(brak - wszystko opublikowane)_
 
 | Date | Item |
 |------|------|
+| 2026-06-02 | SEO post-deploy weryfikacja: JSON-LD walidacja 3 postów (BlogPosting + BreadcrumbList wszędzie OK, FAQPage tylko w `alexa-for-shopping`), statyczny audyt CLS - 2 fixy zaaplikowane: `index.html` hero photo + `blog.html` nav logo dostały `width`/`height` attrs. Live Lighthouse PSI nieuruchomiony (API key needed) - manual check na pagespeed.web.dev pozostaje opcjonalny |
+| 2026-06-02 | Blog post Rufus - update (mniej metafor, bardziej technicznie) opublikowany na żywo |
+| 2026-05-19 | Property w Google Search Console zweryfikowana (DNS TXT przez IONOS), sitemap.xml zgłoszony, indeksacja zainicjowana |
 | 2026-05-19 | Opublikowano nowy post: `alexa-for-shopping-co-z-rufusem.html` (Alexa for Shopping vs Rufus) - HTML + karty index/blog + sitemap + blog JSON-LD. Homepage znów ma 3 posty |
 | 2026-05-19 | Usunięto 3 generyczne posty (jak-znalezc-nisze-amazon-2026, 5-bledow-ppc-amazon, anatomia-idealnego-listingu) - blog ma teraz 3 mocne posty |
 | 2026-05-18 | SEO/AI optimization pass per Google guide - SEO-CHECKLIST.md, optimized post template + skills, sitemap, image perf, `<main>`, author boxes - deployed live (commit 80cf63f) |
@@ -71,9 +72,6 @@ _(brak - wszystko opublikowane)_
 | 2026-05-01 | Email delivery template HTML + Skool banner |
 | 2026-05-01 | Thank-you landing page HTML + Skool banner |
 | 2026-05-01 | Blog post Rufus - rewrite (mniej metafor, bardziej technicznie) |
-| 2026-04-30 | Drugi blog post: jak-ai-zmienia-amazon-ads-2026.html |
-| 2026-04-22 | Pobierz/checklist lead magnet (15 punktów audytu listingu) |
-| 2026-04-15 | Landing/checklist z Skool banner + simplified trust row |
 
 ---
 
